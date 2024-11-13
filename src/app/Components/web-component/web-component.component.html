@@ -1,0 +1,14 @@
+<div [ngClass]="{ 'dark-mode': darkMode }">
+    <btn1-component (onPrimaryClick)="viewer.triggerAnimation()"></btn1-component>
+    <btn2-component (onSecondaryClick)="viewer.triggerAnimation()"></btn2-component>
+    <btn3-component (onAcceptClick)="viewer.triggerAnimation()"></btn3-component>
+    <btn4-component (onCancelClick)="viewer.triggerAnimation()"></btn4-component>
+    <btn5-component (onToggleDarkMode)="toggleDarkMode()"></btn5-component>
+  
+    <contra-component (onPasswordChange)="updatePassword($event)"></contra-component>
+    <email-component (onEmailChange)="updateEmail($event)"></email-component>
+    <texto-component (onTextChange)="updateText($event)"></texto-component>
+  
+    <view-component #viewer [password]="password" [email]="email" [text]="text"></view-component>
+  </div>
+  

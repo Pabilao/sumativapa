@@ -1,0 +1,10 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    transition: transform 0.5s;
+  }
+  .animate {
+    transform: scale(1.2) rotate(20deg);
+  }
+  
