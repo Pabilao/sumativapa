@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-texto-component',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './texto-component.component.html',
   styleUrl: './texto-component.component.css'
 })
 export class TextoComponentComponent {
+  text = '';
+  
+  @Output() onTextChange = new EventEmitter<string>();
 
+  onInputChange() {
+    this.onTextChange.emit(this.text);
+  }
 }

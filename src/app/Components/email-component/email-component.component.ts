@@ -1,9 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-email-component',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './email-component.component.html',
   styleUrl: './email-component.component.css'
 })

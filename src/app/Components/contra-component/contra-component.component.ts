@@ -1,14 +1,15 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contra-component',
   standalone: true,
-  imports: [],
+  imports: [FormsModule], 
   templateUrl: './contra-component.component.html',
   styleUrl: './contra-component.component.css'
 })
 export class ContraComponentComponent {
-  password = '';
+  password = ''; 
   
   @Output() onPasswordChange = new EventEmitter<string>();
 
