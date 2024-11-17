@@ -1,6 +1,14 @@
-input {
-    display: block;
-    margin: 10px 0;
-    padding: 8px;
-  }
-  
+.input-container {
+  margin: 10px 0;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.input-container input:focus {
+  border-color: #3498db;
+}

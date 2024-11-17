@@ -4,7 +4,16 @@
     background-color: lightblue;
     transition: transform 0.5s;
   }
-  .animate {
-    transform: scale(1.2) rotate(20deg);
-  }
-  
+  .view-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.animate {
+    transition: transform 0.3s ease;
+}
+.animate:hover {
+    transform: scale(1.05);
+}

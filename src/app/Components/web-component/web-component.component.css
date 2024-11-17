@@ -1,5 +1,8 @@
+.container {
+  padding: 20px;
+}
+
 .dark-mode {
-    background-color: #333;
-    color: white;
-  }
-  
+  background-color: #333;
+  color: #f4f4f4;
+}
