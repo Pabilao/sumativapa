@@ -8,7 +8,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './btn3-component.component.css'
 })
 export class Btn3ComponentComponent {
-  @Output() onAcceptClick = new EventEmitter<void>();
+  @Output() onChangeColor = new EventEmitter<void>();
 
-  emitAccept() { this.onAcceptClick.emit(); }
+    emitChangeColor() {
+        // Emitir evento para cambiar el color
+        this.onChangeColor.emit();
+    }
 }

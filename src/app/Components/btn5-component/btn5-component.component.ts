@@ -8,7 +8,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './btn5-component.component.css'
 })
 export class Btn5ComponentComponent {
-  @Output() onToggleDarkModeClick = new EventEmitter<void>();
+  @Output() onToggleDarkMode = new EventEmitter<void>();
 
-  emitToggleDarkMode() { this.onToggleDarkModeClick.emit(); }
+    emitToggleDarkMode() {
+        // Emitir evento para cambiar el modo oscuro
+        this.onToggleDarkMode.emit();
+    }
 }

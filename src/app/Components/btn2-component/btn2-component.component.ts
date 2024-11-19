@@ -8,7 +8,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './btn2-component.component.css'
 })
 export class Btn2ComponentComponent {
-  @Output() onSecondaryClick = new EventEmitter<void>();
+  @Output() onDecreaseFontSize = new EventEmitter<void>();
 
-  emitSecondary() { this.onSecondaryClick.emit(); }
+    emitDecreaseFontSize() {
+        // Emitir evento para disminuir el tamaño de fuente
+        this.onDecreaseFontSize.emit();
+    }
 }

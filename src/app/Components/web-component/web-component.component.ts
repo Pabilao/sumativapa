@@ -19,15 +19,45 @@ import { NgClass } from '@angular/common';
 })
 export class WebComponentComponent {
   password = '';
-  email = '';
-  text = '';
-  darkMode = false;
+    email = '';
+    text = '';
+    darkMode = false;
+    fontSize = 16; // Tamaño de fuente inicial
 
-  updatePassword(password: string) { this.password = password; }
-  updateEmail(email: string) { this.email = email; }
-  updateText(text: string) { this.text = text; }
+    updatePassword(password: string) { this.password = password; }
+    updateEmail(email: string) { this.email = email; }
+    updateText(text: string) { this.text = text; }
 
-  toggleDarkMode() {
-    this.darkMode = !this.darkMode;
+    toggleDarkMode() {
+        this.darkMode = !this.darkMode;
+    }
+
+    // Maneja el evento de aumentar el tamaño de fuente
+    handleIncreaseFontSize() {
+        if (this.fontSize < 30) { // Límite máximo
+            this.fontSize += 2; // Aumenta el tamaño de la letra
+        }
+    }
+
+    // Maneja el evento de disminuir el tamaño de fuente
+    handleDecreaseFontSize() {
+        if (this.fontSize > 10) { // Límite mínimo
+            this.fontSize -= 2; // Disminuye el tamaño de la letra
+        }
+    }
+
+    // Maneja el evento de cambiar el color de fondo
+    handleChangeColor() {
+      const viewer = document.querySelector('.viewer') as HTMLElement; // Asegúrate de que sea un HTMLElement
+      if (viewer) {
+          viewer.style.backgroundColor = viewer.style.backgroundColor === 'lightgray' ? 'white' : 'lightgray';
+      }
   }
+
+    // Maneja el evento de limpiar los inputs
+    handleClearInputs() {
+        this.password = '';
+        this.email = '';
+        this.text = '';
+    }
 }

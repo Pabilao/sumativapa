@@ -8,7 +8,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './btn1-component.component.css'
 })
 export class Btn1ComponentComponent {
-  @Output() onPrimaryClick = new EventEmitter<void>();
+  @Output() onIncreaseFontSize = new EventEmitter<void>();
 
-  emitPrimary() { this.onPrimaryClick.emit(); }
+  emitIncreaseFontSize() {
+      this.onIncreaseFontSize.emit();
+  }
 }

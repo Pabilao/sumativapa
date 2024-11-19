@@ -8,7 +8,10 @@ import { Component, Output,EventEmitter } from '@angular/core';
   styleUrl: './btn4-component.component.css'
 })
 export class Btn4ComponentComponent {
-  @Output() onCancelClick = new EventEmitter<void>();
+  @Output() onClearInputs = new EventEmitter<void>();
 
-  emitCancel() { this.onCancelClick.emit(); }
+    emitClearInputs() {
+        // Emitir evento para limpiar los inputs
+        this.onClearInputs.emit();
+    }
 }
