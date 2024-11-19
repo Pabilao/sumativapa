@@ -1,8 +1,56 @@
-.container {
-  padding: 20px;
+/* Contenedor principal */
+.general {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.dark-mode {
-  background-color: #333;
-  color: #f4f4f4;
+/* Contenedor izquierdo (botones + inputs) */
+.components {
+  height: 90%;
+  flex: 1; /* Ocupa exactamente la mitad izquierda */
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columnas */
+  padding: 1rem;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+  border-right: 2px solid #e0e0e0; /* Línea divisoria */
 }
+
+/* Botones en la parte superior izquierda */
+.components .buttons {
+  display: flex;
+  flex-wrap: wrap; /* Permite acomodar los botones en filas */
+  justify-content: flex-start; /* Alineados al inicio (izquierda) */
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Inputs uno debajo del otro */
+.components .inputs {
+  display: flex;
+  flex-direction: column; /* Organiza los inputs en una columna */
+  align-items: flex-start; /* Alineados al inicio (izquierda) */
+  gap: 1rem; /* Espacio entre cada input */
+  padding: 1rem 0;
+  width: 100%; /* Los inputs ocupan todo el ancho disponible */
+}
+
+/* Contenedor derecho (viewer) */
+.viewer {
+  flex: 1; /* Ocupa exactamente la mitad derecha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 90%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+

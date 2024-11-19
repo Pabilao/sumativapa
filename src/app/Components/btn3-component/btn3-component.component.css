@@ -1,13 +1,13 @@
-.btn-accept {
-  background-color: #e74c3c;
-  color: white;
+button {
+  padding: 10px;
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ffc107;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.btn-accept:hover {
-  background-color: #c0392b;
+button:hover {
+  background-color: #e0a800;
 }

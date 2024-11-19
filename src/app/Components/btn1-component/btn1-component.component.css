@@ -1,13 +1,13 @@
-.btn-primary {
-  background-color: #3498db;
-  color: white;
+button {
+  padding: 10px;
   border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-  background-color: #2980b9;
+button:hover {
+  background-color: #0056b3;
 }

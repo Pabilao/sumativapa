@@ -1,13 +1,18 @@
-<div [ngClass]="{ 'dark-mode': darkMode }">
+<p>SUMATIVA</p>
+<div class="general" [ngClass]="{ 'dark-mode': darkMode }">
   <div class="components">
+    <div class="buttons">
     <app-btn1-component (onPrimaryClick)="viewer.triggerAnimation()"></app-btn1-component>
     <app-btn2-component (onSecondaryClick)="viewer.triggerAnimation()"></app-btn2-component>
     <app-btn3-component (onAcceptClick)="viewer.triggerAnimation()"></app-btn3-component>
     <app-btn4-component (onCancelClick)="viewer.triggerAnimation()"></app-btn4-component>
     <app-btn5-component (onToggleDarkMode)="toggleDarkMode()"></app-btn5-component>
+    </div>
+    <div class="inputs">
     <app-contra-component (onPasswordChange)="updatePassword($event)"></app-contra-component>
     <app-email-component (onEmailChange)="updateEmail($event)"></app-email-component>
     <app-texto-component (onTextChange)="updateText($event)"></app-texto-component>
+    </div>
   </div>
   <div class="viewer">
     <app-view-component #viewer [password]="password" [email]="email" [text]="text"></app-view-component>
