@@ -2,7 +2,7 @@
   <h3>Datos Ingresados:</h3>
   <p><strong>Contraseña:</strong> <span>{{ password }}</span></p>
   <p><strong>Email:</strong> <span>{{ email }}</span></p>
-  <div [class.animate]="animate" class="text-box">
+  <div class="text-box" [ngStyle]="{ 'background-color': boxColor }">
     <p><strong>Texto:</strong> <span>{{ text }}</span></p>
   </div>
 </div>

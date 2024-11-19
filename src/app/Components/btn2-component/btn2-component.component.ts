@@ -10,8 +10,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class Btn2ComponentComponent {
   @Output() onDecreaseFontSize = new EventEmitter<void>();
 
-    emitDecreaseFontSize() {
-        // Emitir evento para disminuir el tamaño de fuente
-        this.onDecreaseFontSize.emit();
-    }
+  emitDecreaseFontSize() {
+    this.onDecreaseFontSize.emit(); // Emite el evento
+  }
 }

@@ -16,4 +16,8 @@ export class ContraComponentComponent {
   onInputChange() {
     this.onPasswordChange.emit(this.password);
   }
+  clearPassword() {
+    this.password = ''; // Limpia el input
+    this.onPasswordChange.emit(this.password); // Notifica al componente padre
+  }
 }

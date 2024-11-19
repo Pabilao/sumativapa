@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-view-component',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './view-component.component.html',
   styleUrl: './view-component.component.css'
 })
@@ -11,10 +13,5 @@ export class ViewComponentComponent {
   @Input() password: string = '';
   @Input() email: string = '';
   @Input() text: string = '';
-  animate = false;
-
-  triggerAnimation() {
-    this.animate = true;
-    setTimeout(() => this.animate = false, 500);
-  }
+  @Input() boxColor: string = 'white';
 }

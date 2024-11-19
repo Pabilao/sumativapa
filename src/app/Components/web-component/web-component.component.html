@@ -1,19 +1,41 @@
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<h1>SUMATIVA</h1>
 <div class="general">
   <div class="components">
     <div class="buttons">
-  <app-btn1-component (onIncreaseFontSize)="handleIncreaseFontSize()"></app-btn1-component>
-  <app-btn2-component (onDecreaseFontSize)="handleDecreaseFontSize()"></app-btn2-component>
-  <app-btn3-component (onChangeColor)="handleChangeColor()"></app-btn3-component>
-  <app-btn4-component (onClearInputs)="handleClearInputs()"></app-btn4-component>
-  <app-btn5-component (onToggleDarkMode)="toggleDarkMode()"></app-btn5-component>
+      <!-- Botones -->
+      <app-btn1-component (onIncreaseFontSize)="handleIncreaseFontSize()"></app-btn1-component>
+      <app-btn2-component (onDecreaseFontSize)="handleDecreaseFontSize()"></app-btn2-component>
+      <app-btn3-component (onChangeColor)="handleChangeColor()"></app-btn3-component>
+      <app-btn4-component (onClearInputs)="handleClearInputs()"></app-btn4-component>
+      <app-btn5-component (onToggleDarkMode)="toggleDarkMode()"></app-btn5-component>
     </div>
     <div class="inputs">
-  <app-texto-component (onTextChange)="updateText($event)"></app-texto-component>
-  <app-email-component (onEmailChange)="updateEmail($event)"></app-email-component>
-  <app-contra-component (onPasswordChange)="updatePassword($event)"></app-contra-component>
+      <!-- Inputs con referencias -->
+      <app-texto-component 
+        #textoComponent 
+        (onTextChange)="updateText($event)">
+      </app-texto-component>
+
+      <app-email-component 
+        #emailComponent 
+        (onEmailChange)="updateEmail($event)">
+      </app-email-component>
+
+      <app-contra-component 
+        #contraComponent 
+        (onPasswordChange)="updatePassword($event)">
+      </app-contra-component>
     </div>
   </div>
   <div class="viewer" [style.fontSize.px]="fontSize">
-    <app-view-component #viewer [password]="password" [email]="email" [text]="text"></app-view-component>
+    <!-- Viewer -->
+    <app-view-component 
+      [boxColor]="boxColor" 
+      [password]="password" 
+      [email]="email" 
+      [text]="text">
+    </app-view-component>
   </div>
 </div>
+

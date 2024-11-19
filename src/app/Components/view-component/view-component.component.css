@@ -23,7 +23,7 @@
 
 /* Párrafos */
 .data-container p {
-    font-size: 1.25rem; /* Aumenté el tamaño de la fuente */
+    
     line-height: 1.8; /* Aumenté el espacio entre líneas */
     margin: 0.75rem 0; /* Aumenté el margen */
 }
@@ -47,6 +47,8 @@
     border: 1px solid #d0e8ff;
     transition: all 0.3s ease;
     text-align: center;
+    transition: background-color 0.3s ease;
+
 }
 
 /* Animación suave */

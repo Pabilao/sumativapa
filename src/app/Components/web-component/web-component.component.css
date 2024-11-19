@@ -1,8 +1,19 @@
-/* Contenedor principal */
+h1 {
+  font-size: 2em;
+  color: #4CAF50; /* Un verde más amigable */
+  font-family: 'Poppins', sans-serif; /* O elige una fuente amigable desde Google Fonts */
+  text-align: center; /* Centra horizontalmente */
+  margin-top: 20px; /* Añade algo de separación */
+}
+
+
+
 .general {
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  height: 85vh; /* Ocupa toda la altura de la pantalla */
+  width: 60%;
   border: 1px solid #ddd;
   border-radius: 12px;
   background-color: #f9f9f9;

@@ -10,10 +10,16 @@ import { FormsModule } from '@angular/forms';
 })
 export class EmailComponentComponent {
   email = '';
-  
+
   @Output() onEmailChange = new EventEmitter<string>();
 
   onInputChange() {
     this.onEmailChange.emit(this.email);
+  }
+
+  // Método para limpiar el email
+  clearEmail() {
+    this.email = ''; // Limpia el input
+    this.onEmailChange.emit(this.email); // Notifica al componente padre
   }
 }

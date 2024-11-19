@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
 import { Btn1ComponentComponent } from '../btn1-component/btn1-component.component';
 import { Btn2ComponentComponent } from '../btn2-component/btn2-component.component';
 import { Btn3ComponentComponent } from '../btn3-component/btn3-component.component';
@@ -18,46 +18,59 @@ import { NgClass } from '@angular/common';
   styleUrl: './web-component.component.css'
 })
 export class WebComponentComponent {
-  password = '';
-    email = '';
+    fontSize = 16; // Tamaño inicial de la fuente
     text = '';
-    darkMode = false;
-    fontSize = 16; // Tamaño de fuente inicial
-
-    updatePassword(password: string) { this.password = password; }
-    updateEmail(email: string) { this.email = email; }
-    updateText(text: string) { this.text = text; }
-
-    toggleDarkMode() {
-        this.darkMode = !this.darkMode;
-    }
-
-    // Maneja el evento de aumentar el tamaño de fuente
+    email = '';
+    password = '';
+  
+    // Métodos para manejar los eventos
     handleIncreaseFontSize() {
-        if (this.fontSize < 30) { // Límite máximo
-            this.fontSize += 2; // Aumenta el tamaño de la letra
-        }
+      this.fontSize += 2; // Incrementa el tamaño de fuente
     }
-
-    // Maneja el evento de disminuir el tamaño de fuente
+  
     handleDecreaseFontSize() {
-        if (this.fontSize > 10) { // Límite mínimo
-            this.fontSize -= 2; // Disminuye el tamaño de la letra
-        }
+      if (this.fontSize > 8) this.fontSize -= 2; // Reduce el tamaño de fuente mínimo a 8px
     }
+  
+    updateText(newText: string) {
+      this.text = newText; // Actualiza el texto
+    }
+  
+    updateEmail(newEmail: string) {
+      this.email = newEmail; // Actualiza el email
+    }
+  
+    updatePassword(newPassword: string) {
+      this.password = newPassword; // Actualiza la contraseña
+    }
+  
+    toggleDarkMode() {
+      document.body.classList.toggle('dark-mode'); // Alterna el modo oscuro
+    }
+    // Suggested code may be subject to a license. Learn more: ~LicenseLog:3098691472.
+    isDarkMode = false;
 
-    // Maneja el evento de cambiar el color de fondo
+    // Propiedad para almacenar el color actual del recuadro
+    boxColor = 'white'; // Color inicial del recuadro
+
+    // Lista de colores para alternar
+    colors = ['white', 'lightblue', 'lightgreen', 'lightcoral', 'lightyellow'];
+    currentColorIndex = 0;
+
     handleChangeColor() {
-      const viewer = document.querySelector('.viewer') as HTMLElement; // Asegúrate de que sea un HTMLElement
-      if (viewer) {
-          viewer.style.backgroundColor = viewer.style.backgroundColor === 'lightgray' ? 'white' : 'lightgray';
-      }
+    // Cambiar al siguiente color de la lista
+    this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
+    this.boxColor = this.colors[this.currentColorIndex];
   }
-
-    // Maneja el evento de limpiar los inputs
+    @ViewChild(EmailComponentComponent) emailComponent!: EmailComponentComponent;
+    @ViewChild(TextoComponentComponent) textoComponent!: TextoComponentComponent;
+    @ViewChild(ContraComponentComponent) contraComponent!: ContraComponentComponent;
     handleClearInputs() {
-        this.password = '';
-        this.email = '';
-        this.text = '';
+      this.text = '';
+      this.email = '';
+      this.password = '';
+      this.emailComponent.clearEmail();
+      this.textoComponent.clearText();
+      this.contraComponent.clearPassword();
     }
 }

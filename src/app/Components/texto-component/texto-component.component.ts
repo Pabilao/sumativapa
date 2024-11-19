@@ -16,4 +16,8 @@ export class TextoComponentComponent {
   onInputChange() {
     this.onTextChange.emit(this.text);
   }
+  clearText() {
+    this.text = ''; // Limpia el input
+    this.onTextChange.emit(this.text); // Notifica al componente padre
+  }
 }
