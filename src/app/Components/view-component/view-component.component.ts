@@ -15,6 +15,6 @@ export class ViewComponentComponent {
   @Input() email: string = '';
   @Input() text: string = '';
   @Input() boxColor: string = 'white';
-
+  @Input() isDarkMode: boolean= true;
 
 }

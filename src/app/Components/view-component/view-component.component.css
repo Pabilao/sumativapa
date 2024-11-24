@@ -26,16 +26,15 @@
 .data-container p {
     line-height: 2; /* Más espacio entre líneas */
     margin: 1.5rem 0; /* Separación más amplia */
-    color: #444;
 }
 
 .data-container p strong {
     font-weight: bold;
-    color: #333;
+    
 }
 
 .data-container p span {
-    color: #555;
+ 
     font-style: italic;
 }
 
@@ -69,7 +68,11 @@
 .text-box {
     transition: all 0.3s ease;
 }
+/* viewer.component.css */
 .dark-mode {
     background-color: #121212;
     color: white;
-  }
+}
+.data-container.dark-mode .t {
+    color: black !important; /* Texto blanco con prioridad */
+}

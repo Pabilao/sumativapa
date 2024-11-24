@@ -1,9 +1,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <div [ngClass]="{'dark-mode': isDarkMode}">
 <h1>SUMATIVA</h1>
-<div class="general">
-  <div class="components">
-    <div class="buttons" [ngClass]="{'dark-mode': isDarkMode}">
+<div class="general" [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="components" [ngClass]="{'dark-mode': isDarkMode}">
+    <div class="buttons" >
       <!-- Botones -->
       <app-btn1-component (onIncreaseFontSize)="handleIncreaseFontSize()"></app-btn1-component>
       <app-btn2-component (onDecreaseFontSize)="handleDecreaseFontSize()"></app-btn2-component>
@@ -11,7 +11,7 @@
       <app-btn4-component (onClearInputs)="handleClearInputs()"></app-btn4-component>
       <app-btn5-component (onToggleDarkMode)="toggleDarkMode()"></app-btn5-component>
     </div>
-    <div class="inputs" [ngClass]="{'dark-mode': isDarkMode}">
+    <div class="inputs" >
       <!-- Inputs con referencias -->
       <app-texto-component 
         #textoComponent 
@@ -35,7 +35,8 @@
       [boxColor]="boxColor" 
       [password]="password" 
       [email]="email" 
-      [text]="text">
+      [text]="text"
+      [isDarkMode]="isDarkMode">
     </app-view-component>
   </div>
 </div>

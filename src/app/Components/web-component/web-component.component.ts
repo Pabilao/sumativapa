@@ -43,10 +43,12 @@ export class WebComponentComponent {
     updatePassword(newPassword: string) {
       this.password = newPassword; // Actualiza la contraseña
     }
-  
+    backgroundColor = 'white';
+    // Método para alternar el modo oscuro
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode; // Cambia el estado del modo oscuro
       document.body.classList.toggle('dark-mode', this.isDarkMode); // Alterna la clase 'dark-mode'
+      
     }
     // Suggested code may be subject to a license. Learn more: ~LicenseLog:3098691472.
     isDarkMode = false;
