@@ -45,7 +45,8 @@ export class WebComponentComponent {
     }
   
     toggleDarkMode() {
-      document.body.classList.toggle('dark-mode'); // Alterna el modo oscuro
+      this.isDarkMode = !this.isDarkMode; // Cambia el estado del modo oscuro
+      document.body.classList.toggle('dark-mode', this.isDarkMode); // Alterna la clase 'dark-mode'
     }
     // Suggested code may be subject to a license. Learn more: ~LicenseLog:3098691472.
     isDarkMode = false;
