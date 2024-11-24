@@ -1,13 +1,18 @@
 button {
-  padding: 10px;
+  padding: 12px 16px;
   border: none;
-  border-radius: 5px;
-  background-color: #dc3545;
-  color: white;
+  border-radius: 8px;
+  background-color: #E74C3C; /* Rojo más moderno */
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  background-color: #c82333;
+  background-color: #C0392B; /* Rojo más oscuro */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }

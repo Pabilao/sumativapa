@@ -11,8 +11,10 @@ import { FormsModule } from '@angular/forms';
 export class EmailComponentComponent {
   email = '';
 
-  @Output() onEmailChange = new EventEmitter<string>();
+  
 
+  @Output() onEmailChange = new EventEmitter<string>();
+  
   onInputChange() {
     this.onEmailChange.emit(this.email);
   }

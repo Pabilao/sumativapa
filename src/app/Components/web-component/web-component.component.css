@@ -1,67 +1,83 @@
+/* Título principal */
 h1 {
-  font-size: 2em;
-  color: #4CAF50; /* Un verde más amigable */
-  font-family: 'Poppins', sans-serif; /* O elige una fuente amigable desde Google Fonts */
-  text-align: center; /* Centra horizontalmente */
-  margin-top: 20px; /* Añade algo de separación */
+  font-size: 2.5em; /* Tamaño más destacado */
+  color: #4CAF50; /* Verde amigable */
+  font-family: 'Poppins', sans-serif; /* Fuente amigable y consistente */
+  text-align: center;
+  margin-top: 30px; /* Más espacio superior */
+  margin-bottom: 1.5rem; /* Separación con el contenido siguiente */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  font-weight: 600; /* Mayor énfasis */
 }
 
-
-
+/* Contenedor general */
 .general {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  height: 85vh; /* Ocupa toda la altura de la pantalla */
-  width: 60%;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  height: 80vh; /* Mantiene la altura */
+  width: 70%; /* Ancho un poco más amplio */
+  border: 2px solid #ddd; /* Bordes más marcados */
+  border-radius: 15px; /* Más redondeo */
   background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Sombras más elegantes */
   overflow: hidden;
+  transition: box-shadow 0.3s ease; /* Animación al interactuar */
+}
+
+.general:hover {
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hover */
 }
 
 /* Contenedor izquierdo (botones + inputs) */
 .components {
-  height: 90%;
-  flex: 1; /* Ocupa exactamente la mitad izquierda */
+  height: 100%;
+  flex: 1;
   display: flex;
-  flex-direction: column; /* Organiza los elementos en columnas */
-  padding: 1rem;
+  flex-direction: column;
+  padding: 1.5rem;
   background-color: #fcfcfc;
   box-sizing: border-box;
   border-right: 2px solid #e0e0e0; /* Línea divisoria */
+  gap: 1.5rem; /* Espaciado entre secciones */
 }
 
 /* Botones en la parte superior izquierda */
 .components .buttons {
   display: flex;
-  flex-wrap: wrap; /* Permite acomodar los botones en filas */
-  justify-content: flex-start; /* Alineados al inicio (izquierda) */
-  gap: 0.5rem;
-  padding: 0.5rem 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem; /* Más espacio entre botones */
+  padding: 1rem 0;
 }
 
 /* Inputs uno debajo del otro */
 .components .inputs {
   display: flex;
-  flex-direction: column; /* Organiza los inputs en una columna */
-  align-items: flex-start; /* Alineados al inicio (izquierda) */
-  gap: 1rem; /* Espacio entre cada input */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem; /* Más espacio entre inputs */
   padding: 1rem 0;
-  width: 100%; /* Los inputs ocupan todo el ancho disponible */
+  width: 100%;
 }
 
 /* Contenedor derecho (viewer) */
 .viewer {
-  flex: 1; /* Ocupa exactamente la mitad derecha */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
-  height: 90%;
+  width: 50%; /* Ocupa un poco más de espacio */
+  height: 100%;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 2.5rem; /* Más espacio interno */
+  border-radius: 0 15px 15px 0; /* Redondeo en el lado derecho */
 }
 
+/* Transiciones generales */
+.general,
+.viewer,
+.components {
+  transition: all 0.3s ease;
+}

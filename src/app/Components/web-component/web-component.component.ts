@@ -18,7 +18,7 @@ import { NgClass } from '@angular/common';
   styleUrl: './web-component.component.css'
 })
 export class WebComponentComponent {
-    fontSize = 16; // Tamaño inicial de la fuente
+    fontSize = 22; // Tamaño inicial de la fuente
     text = '';
     email = '';
     password = '';

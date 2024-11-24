@@ -1,36 +1,37 @@
 /* Contenedor principal */
 .data-container {
-    max-width: 600px; /* Aumenté el ancho máximo */
-    margin: 3rem auto; /* Aumenté el margen */
-    padding: 2rem; /* Aumenté el padding */
+    width: 400px; /* Mayor ancho para más contenido */
+    margin: 5rem auto; /* Separación superior e inferior más amplia */
+    padding: 3rem; /* Más espacio interno */
     border: 1px solid #e0e0e0;
-    border-radius: 15px; /* Hice el borde más redondeado */
+    border-radius: 25px; /* Bordes más suaves y grandes */
     background-color: #fafafa;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Aumenté el tamaño de la sombra */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombras más amplias */
     font-family: 'Arial', sans-serif;
     color: #333;
 }
 
 /* Título */
 .data-container h3 {
-    margin-bottom: 1.5rem; /* Aumenté el margen inferior */
-    font-size: 2rem; /* Aumenté el tamaño de fuente */
+    margin-bottom: 2.5rem; /* Mayor separación con el contenido */
     color: #4a90e2;
     text-align: center;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 0.75rem; /* Aumenté el padding */
+    border-bottom: 2px solid #d0d0d0;
+    padding-bottom: 1.5rem; /* Más espacio debajo del título */
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* Párrafos */
 .data-container p {
-    
-    line-height: 1.8; /* Aumenté el espacio entre líneas */
-    margin: 0.75rem 0; /* Aumenté el margen */
+    line-height: 2; /* Más espacio entre líneas */
+    margin: 1.5rem 0; /* Separación más amplia */
+    color: #444;
 }
 
 .data-container p strong {
     font-weight: bold;
-    color: #4a4a4a;
+    color: #333;
 }
 
 .data-container p span {
@@ -40,27 +41,27 @@
 
 /* Cuadro de texto */
 .text-box {
-    margin-top: 1.5rem; /* Aumenté el margen superior */
-    padding: 1.5rem; /* Aumenté el padding */
-    border-radius: 12px; /* Hice el borde más redondeado */
+    margin-top: 2.5rem; /* Mayor separación superior */
+    padding: 2.5rem; /* Más espacio interno */
+    border-radius: 20px; /* Bordes más suaves y amplios */
     background-color: #f5faff;
     border: 1px solid #d0e8ff;
-    transition: all 0.3s ease;
     text-align: center;
-    transition: background-color 0.3s ease;
-
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Sombras más ligeras */
+    transition: all 0.3s ease;
 }
 
 /* Animación suave */
 .text-box.animate {
-    transform: scale(1.1); /* Aumenté el tamaño de la animación */
-    box-shadow: 0 8px 16px rgba(74, 144, 226, 0.3); /* Aumenté el tamaño de la sombra */
+    transform: scale(1.08); /* Animación más notable */
+    box-shadow: 0 12px 24px rgba(74, 144, 226, 0.3); /* Sombras más profundas al animarse */
 }
 
-/* Efecto hover para debugging */
+/* Efecto hover */
 .text-box:hover {
     background-color: #e8f3ff;
-    border-color: #b0d4ff;
+    border-color: #a8d4ff;
+    transform: translateY(-3px); /* Mayor elevación al hover */
 }
 
 /* Transiciones */
