@@ -1,4 +1,4 @@
 <!-- src/app/Components/contra-component/contra-component.component.html -->
 <p>Contraseña: </p>
-<input [(ngModel)]="password" (input)="onInputChange()" placeholder="Contraseña">
+<input type="password" [(ngModel)]="password" (input)="onInputChange()" placeholder="Contraseña">
 <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
